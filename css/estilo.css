@@ -51,7 +51,41 @@ h3 {
     margin: 10px 0;
 }
 
-table img {
+.table-img {
     width: 220px;
     border: 1px solid #ccc;
+}
+
+.fundo-modal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.modal-card {
+    align-items: center;
+}
+
+.form-modal {
+    width: 450px;
+}
+
+.text-area {
+    resize: none;
+}
+
+.btn-group {
+    width: 100%;
+    display: block;
+}
+
+.btn-cancel, .btn-save {
+    width: 100%;
 }
