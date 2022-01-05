@@ -89,3 +89,14 @@ h3 {
 .btn-cancel, .btn-save {
     width: 100%;
 }
+
+
+#descricao{
+    width: 75%;
+    height: 130px;
+}
+
+
+#modalform label{
+    display: block;
+}

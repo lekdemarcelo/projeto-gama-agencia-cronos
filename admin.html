@@ -27,8 +27,38 @@
 
 
           <h3>Serviços</h3>
-          <button class="btn btn-primary btn-add">Adicionar novo</button>
-          <table class="table my-5">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Adicionar novo</button>
+        
+
+          
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Cadastro de Serviços</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <form id="modalform">
+                <label for="servico">Digite o nome do serviço:</label>
+          <input type="text" name="servico" id="servico" class="w-75 mb-4" required placeholder="Marketing">
+          <label for="arquivo">Digite a URL de perfil do Serviço</label>
+          <input type="text" id="arquivo" class="w-75" name="arquivo" onchange="carregarImagem(event)" placeholder="google.com/imagens..."> 
+          <img id="previewimage" class="img-thumbnail w-75 mt-1"/>                 
+          <label for="descricao" class="mt-4 w-100" >Digite a descrição do serviço:</label>
+          <textarea id="descricao" required placeholder="Iremos tratar de..."></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger m-2" data-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary" id="envio" onclick="adicionarServico()" data-dismiss="modal">Adicionar serviço</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+          <table class="table my-5" id="minha-tabela">
             <thead>
               <tr>
                 <td>Nome</td>
