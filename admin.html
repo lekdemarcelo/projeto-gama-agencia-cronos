@@ -25,40 +25,38 @@
       <div class="row">
         <div class="col">
 
-
           <h3>Serviços</h3>
           <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Adicionar novo</button>
-        
 
-          
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Cadastro de Serviços</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Cadastro de Serviços</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                  <form id="modalform">
+                    <label for="servico">Digite o nome do serviço:</label>
+                    <input type="text" name="servico" id="servico" class="w-75 mb-4 form-control" required placeholder="Marketing">
+                    <label for="arquivo">Digite a URL de perfil do Serviço</label>
+                    <input type="text" id="arquivo" class="w-75 form-control" name="arquivo" placeholder="google.com/imagens...">
+                    <label for="descricao" class="mt-4 w-100">Digite a descrição do serviço:</label>
+                    <textarea id="descricao" class="form-control" required placeholder="Iremos tratar de..."></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary" id="envio" onclick="adicionarServico()"
+                    data-dismiss="modal">Adicionar</button>
+                  <button type="button" class="btn btn-danger m-2" data-dismiss="modal">Fechar</button>
+                </div>
+                </form>
               </div>
-              <div class="modal-body d-flex flex-column">
-                <form id="modalform">
-                <label for="servico">Digite o nome do serviço:</label>
-          <input type="text" name="servico" id="servico" class="w-75 mb-4" required placeholder="Marketing">
-          <label for="arquivo">Digite a URL de perfil do Serviço</label>
-          <input type="text" id="arquivo" class="w-75" name="arquivo" onchange="carregarImagem(event)" placeholder="google.com/imagens..."> 
-          <img id="previewimage" class="img-thumbnail w-75 mt-1"/>                 
-          <label for="descricao" class="mt-4 w-100" >Digite a descrição do serviço:</label>
-          <textarea id="descricao" required placeholder="Iremos tratar de..."></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger m-2" data-dismiss="modal">Fechar</button>
-          <button type="submit" class="btn btn-primary" id="envio" onclick="adicionarServico()" data-dismiss="modal">Adicionar serviço</button>
-        </div>
-      </form>
-      </div>
-    </div>
-  </div>
-          <table class="table my-5" id="minha-tabela">
+            </div>
+          </div>
+          <table class="table my-5">
             <thead>
               <tr>
                 <td>Nome</td>
@@ -67,14 +65,14 @@
                 <td>Ações</td>
               </tr>
             </thead>
-            <tbody class="corpo-cursos">
+            <tbody class="corpo-cursos" id="container-body">
               <tr>
                 <td class="nome-curso">Desenvolvimento Web</td>
                 <td class="img-curso"><img src="imagens/ilustra-web.png" class="img-fluid table-img" /></td>
                 <td class="descricao-curso">Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
                 <td>
                   <button class="btn btn-secondary m-1 btn-editar">editar</button>
-                  <button class="btn btn-danger m-1 btn-excl">excluir</button>
+                  <button class="btn btn-danger m-1 btn-excl" onclick="excluir()">excluir</button>
                 </td>
               </tr>
               <tr>
@@ -105,42 +103,20 @@
     <div class="container text-center">
       <p class="m-0">
         copyright 2021
-         agência CRONOS
+        agência CRONOS
       </p>
     </div>
   </footer>
-  <div class="fundo-modal invisible">
-    <div class="modal-card">
-      <form class="form-modal card card-body">
-        <div class="form-group">
-          <label for="add-nome-curso">Nome</label>
-          <input type="text" class="form-control" id="add-nome-curso">
-        </div>
-        <div class="form-group">
-          <label for="add-imagem-curso">Imagem</label>
-          <input type="url" class="form-control" id="add-imagem-curso">
-        </div>
-        <div class="form-group">
-          <label for="add-descricao-curso">Descrição</label>
-          <textarea class="form-control text-area" id="" cols="30" rows="5" id="add-descricao-curso"></textarea>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-primary btn-save">Salvar</button>
-          <button class="btn btn-primary btn-cancel">Cancelar</button>
-      </div>
-      </form>
-    </div>
-  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="js/index.js"></script>
 </body>
 
