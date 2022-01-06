@@ -51,7 +51,7 @@ function editar(id) {
         document.getElementById('arquivo').value = dadoServico[i]['arquivo'];
         document.getElementById('descricao').value = dadoServico[i]['descricao'];
         return
-    }  alert("nao encontrado")      
+    }    
 } 
 }
 
