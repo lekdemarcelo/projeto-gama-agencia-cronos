@@ -39,7 +39,9 @@
                   </button>
                 </div>
                 <div class="modal-body d-flex flex-column">
-                  <form id="modalform">
+                  <form id="modalForm">
+                    <label for="id">Digite o id do serviço:</label>
+                    <input type="number" name="id" id="id" class="w-75 mb-4 form-control">
                     <label for="servico">Digite o nome do serviço:</label>
                     <input type="text" name="servico" id="servico" class="w-75 mb-4 form-control" required placeholder="Marketing">
                     <label for="arquivo">Digite a URL de perfil do Serviço</label>
@@ -47,9 +49,10 @@
                     <label for="descricao" class="mt-4 w-100">Digite a descrição do serviço:</label>
                     <textarea id="descricao" class="form-control" required placeholder="Iremos tratar de..."></textarea>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" id="modal-footer">
                   <button type="submit" class="btn btn-primary" id="envio" onclick="adicionarServico()"
                     data-dismiss="modal">Adicionar</button>
+                    <button type="submit" class="btn btn-warning invisible" id="editar" data-dismiss="modal" onclick="confirmarEditar()">Editar</button>
                   <button type="button" class="btn btn-danger m-2" data-dismiss="modal">Fechar</button>
                 </div>
                 </form>
