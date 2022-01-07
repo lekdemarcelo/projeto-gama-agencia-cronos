@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background-color: #0097A7;
+    text-align: center;
+    box-shadow: 0px 4px 4px 2px rgb(0 0 0 / 14%);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff !important;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    color: #0097A7;
+
+}
+
+h3 {
+    font-size: 25px;
+    margin: 30px 0;
+}
+
+.btn.btn-primary {
+    background-color: #0097A7;
+    border-color: #0097A7;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.table-img {
+    width: 220px;
+    border: 1px solid #ccc;
+}
+
+.form-modal {
+    width: 450px;
+}
+
+.text-area {
+    resize: none;
+}
+
+.btn-group {
+    width: 100%;
+    display: block;
+}
+
+.btn-cancel, .btn-save {
+    width: 100%;
+}
+
+#descricao{
+    width: 75%;
+    height: 130px;
+}
+
+#modalform label{
+    display: block;
+}
+
+.table-img {
+    width: 250px;
+    border: 2px solid grey;
+    max-height: 300px;
+}
+
+.service-text {
+    color: blue;
+}
+
+.name-course {
+    max-width: 200px;
+}
+
+.tr-lines {
+    height: 200px;
+}
+
+#add-course-descp {
+    resize: none;
+}
+
+.btn-modal {
+    width: 100%;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-modal {
+    max-width: 400px;
+    height: 515px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>CRONOS AGÊNCIA - admin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/estilo.css" />
+      </head>
+      
+      <div id="root">
+      <body>
+        <header>
+          <div class="container">
+            <a href="App.js">
+              <img src="imagens/CRONOS-logo-white.png" alt="Agência CRONOS" />
+            </a>
+            <h1>Painel administrativo</h1>
+          </div>
+        </header>
+        <section id="servicos" class="py-5 mb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+
+                <h3>Serviços</h3>
+                <button class="btn btn-primary" id="btn-add">Adicionar novo</button>
+                <table class="table my-5">
+                  <thead>
+                    <tr>
+                      <td>Nome</td>
+                      <td>Imagem</td>
+                      <td>Descrição</td>
+                      <td>Ações</td>
+                    </tr>
+                  </thead>
+                  <tbody class="corpo-cursos" id="container-body">
+                    <tr>
+                      <td class="nome-curso">Desenvolvimento Web</td>
+                      <td class="img-curso"><img src="imagens/ilustra-web.png" class="img-fluid table-img" alt='' /></td>
+                      <td class="descricao-curso">Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
+                      <td>
+                        <button class="btn btn-secondary m-1 btn-editar">editar</button>
+                        <button class="btn btn-danger m-1 btn-excl" onclick="excluir()">excluir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="nome-curso">Marketing Digital</td>
+                      <td class="img-curso"><img src="imagens/ilustra-marketing.png" class="img-fluid table-img" alt='' /></td>
+                      <td class="descricao-curso">Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
+                      <td>
+                        <button class="btn btn-secondary m-1 btn-editar">editar</button>
+                        <button class="btn btn-danger m-1 btn-excl">excluir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="nome-curso">Consultoria UX</td>
+                      <td class="img-curso"><img src="imagens/ilustra-ux.png" class="img-fluid table-img" alt='' /></td>
+                      <td class="descricao-curso">Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
+                      <td>
+                        <button class="btn btn-secondary m-1 btn-editar">editar</button>
+                        <button class="btn btn-danger m-1 btn-excl">excluir</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="py-3 bg-light">
+          <div class="container text-center">
+            <p class="m-0">
+              copyright 2021
+              agência CRONOS
+            </p>
+          </div>
+        </footer>
+
+        <div class="modal-container invisible" id="modal-container">
+          <form class="form-control form-modal card card-body" id="form-modal">
+            <div class="mb-3">
+              <label for="add-course-id" class="form-label">ID</label>
+              <input type="number" class="form-control" id="add-course-id" />
+            </div>
+            <div class="mb-3">
+              <label for="add-course-name" class="form-label">Course Name</label>
+              <input type="text" class="form-control" id="add-course-name" />
+            </div>
+            <div class="mb-3">
+              <label for="add-course-img" class="form-label">Course Image</label>
+              <input type="url" class="form-control" id="add-course-img" />
+            </div>
+            <div class="mb-3">
+              <label for="add-course-descp" class="form-label">Course Description</label>
+              <textarea class="form-control" id="add-course-descp" rows="3"></textarea>
+            </div>
+            <div id="btns-modal">
+              <button class="btn btn-primary mb-2 btn-save d-block btn-modal" id="btn-save">SAVE</button>
+              <button class="btn btn-warning btn-cancel d-block btn-modal" id="btn-cancel">CANCEL</button>
+              <button class="btn btn-primary mb-2 btn-save-changes d-block btn-modal invisible" id="btn-save-changes">SAVE
+                CHANGES</button>
+            </div>
+          </form>
+        </div>
+
+        <script src="js/index.js"></script>
+      </body>
+    </div>
+
+    </html>
