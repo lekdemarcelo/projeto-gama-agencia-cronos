@@ -5,7 +5,7 @@
 <h1 align="center">Desafio #2 (Projeto Agência Cronos - CRUD)</h1> <br><br> 
 
 <p align="center"> 
-  <img src="https://github.com/lekdemarcelo/projeto-gama-agencia-cronos/blob/main/imagens/CRONOS-logo.png?raw=true" width="50%">
+  <img src=https://github.com/lekdemarcelo/projeto-gama-agencia-cronos/blob/main/public/imagens/CRONOS-logo.png?raw=true" width="50%">
 </p>
 
 
